@@ -353,8 +353,7 @@ function candle(x, y, h, red, w = 18){
   all(".js-ca").forEach(e => { if (CA) e.textContent = CA; });
   if (CA){ all(".js-buy").forEach(a => ext(a, pump)); all(".js-chart").forEach(a => ext(a, dex)); }
   else all(".js-buy-label").forEach(s => s.textContent = "Buy · CA at launch");
-  if (CONFIG.socials.X) all(".js-x").forEach(a => ext(a, CONFIG.socials.X));
-  if (CONFIG.socials.Telegram) all(".js-tg").forEach(a => ext(a, CONFIG.socials.Telegram));
+
   all(".js-copy").forEach(b => { if (!CA) return; b.disabled = false; b.onclick = () => navigator.clipboard.writeText(CA).then(() => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy", 1500); }).catch(() => {}); });
 
   /* reveal */
